@@ -106,6 +106,16 @@ The image with the ROI extracted is shown below:
 
 To find the lines, I extend the `draw_lines()` function, which uses the built-in OpenCV `cv2.HoughLinesP()` function, which returns a list of lines, which is defined by two end points of that line.
 
+Through testing, the following parameters for the `cv2.HoughLinesP()` function are chosen:
+
+    RHO = 1
+    THETA = np.pi/180
+    THRESHOLD = 30  # Number of intersections in Hough-space
+    MIN_LINE_LENGTH = 60  # Pixels
+    MAX_LINE_GAP = 40  # Pixels
+
+Using the above parameters, it is possible to extract only the lines that belong to the lane lines (given the ROI chosen).
+
 I chose the following approach for detecting the lane lines in the output of the `cv2.HoughLinesP()` function:
 
 1. Calculate the slope of all the lines from HoughLinesP output
