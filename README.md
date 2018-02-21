@@ -37,8 +37,7 @@ A brief description of each step is provided below, I will demonstrate the effec
 
 ### 1.1 - Grayscale conversion 
 
-This step will convert and image from a three channel image (r, g, b), to a single channel image, with values in the range `v = [0; 255]`.
-For this step, I use the 
+This step will convert and image from a three channel image (r, g, b), to a single channel image, with values in the range `v = [0; 255]`.  
 The resulting image is shown below.
 ![alt text][gray_scale]
 
